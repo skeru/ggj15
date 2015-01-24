@@ -15,7 +15,10 @@ class HLIF3_API AEnemyProjectile : public AActor
 	GENERATED_BODY()
 public:
 	EProjectileType Type;
-	UStaticMeshComponent* mesh;
+	USkeletalMeshComponent* ActualMesh;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "3D Models")
+	TArray<USkeletalMesh*> Monsters;
 
 public:
 	AEnemyProjectile(const FObjectInitializer& ObjectInitializer);

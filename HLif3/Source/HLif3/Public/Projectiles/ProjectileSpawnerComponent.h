@@ -32,6 +32,7 @@ public:
 private:
 	uint32 IdCount;
 
+	//<id,enemyActor*>
 	Utils::hashmap<uint32, AEnemyProjectile*> EnemiesMap;
 
 	//over maxID Id start again from 0
