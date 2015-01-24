@@ -186,6 +186,8 @@ FakesAssemblies/
 HLif3/Binaries/*
 HLif3/Intermediate/*
 HLif3/Saved/*
+=======
+HLif3/DerivedDataCache
 
 #Starter Content
 HLif3/Content/StarterContent/*
@@ -202,3 +204,4 @@ HLif3/Content/Textures/Crosshair.uasset
 HLif3/Content/Maps/Example_Map.umap
 HLif3/Saved/AutoScreenshot.png
 *.dll
+
