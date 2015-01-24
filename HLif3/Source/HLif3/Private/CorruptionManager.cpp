@@ -25,7 +25,7 @@ void ACorruptionManager::OnCorruptionIncrease(float Value)
 		
 		OnCorruptionUpdate();
 
-		if (IsCorruptionOver(m_maxCorruption))
+		if (IsCorruptionOver(MaxCorruption))
 		{
 			OnGameEnd();
 		}
