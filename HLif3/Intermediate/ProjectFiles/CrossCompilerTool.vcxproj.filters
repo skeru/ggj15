@@ -5,7 +5,7 @@
 		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\CrossCompilerTool\CrossCompilerTool.Target.cs" />
 		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\CrossCompilerTool\CrossCompilerTool.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{B12C01CF-1A4E-46F7-ACA0-B37BF619834C}</UniqueIdentifier>
+			<UniqueIdentifier>{5CC12988-0066-4732-98C7-92A87077FC1E}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\CrossCompilerTool\Private\CrossCompilerTool.cpp">
 			<Filter>Private</Filter>

@@ -5,7 +5,7 @@
 		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\TestPAL\TestPAL.Target.cs" />
 		<None Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\TestPAL\TestPAL.Build.cs" />
 		<Filter Include="Private">
-			<UniqueIdentifier>{50310B3A-4682-4AA1-8173-709205CBF89A}</UniqueIdentifier>
+			<UniqueIdentifier>{8FBB3EAA-9704-43D2-A8F0-7E3E4D1073B7}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\..\..\UnrealEngine\Engine\Source\Programs\TestPAL\Private\Main.cpp">
 			<Filter>Private</Filter>

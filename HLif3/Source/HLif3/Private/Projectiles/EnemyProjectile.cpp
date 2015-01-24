@@ -38,8 +38,8 @@ uint32 AEnemyProjectile::GetId()
 
 void AEnemyProjectile::UpdateMesh()
 {
-	UStaticMesh* m = GetMesh(Type);
+	/*UStaticMesh* m = GetMesh(Type);
 	if (m) {
 		mesh->SetStaticMesh(m);
-	}
+	}*/
 }
