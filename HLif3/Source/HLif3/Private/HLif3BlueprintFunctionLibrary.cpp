@@ -5,8 +5,8 @@
 #include "HLif3BlueprintFunctionLibrary.h"
 
 
-UCharacterDemultiplier * UHLif3BlueprintFunctionLibrary::CreateCharacterDemux()
+UCharacterDemultiplier * UHLif3BlueprintFunctionLibrary::CreateCharacterDemux(TSubclassOf<UCharacterDemultiplier> Demux, AActor * Owner)
 {
-	return NewObject<UCharacterDemultiplier>();
+	return NewObject<UCharacterDemultiplier>((UObject*)Owner,Demux.GetDefaultObject()->GetClass());
 }
 

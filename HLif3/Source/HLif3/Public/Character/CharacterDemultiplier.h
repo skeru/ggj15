@@ -7,15 +7,6 @@
 
 class AHLif3Character;
 
-UENUM(BlueprintType)
-enum class ECharacterDemultiplier : uint8
-{
-	MovementAxisX,
-	MovementAxisZ,
-	Gravity,
-	Jump,
-};
-
 /**
  */
 UCLASS(BlueprintType, Blueprintable)
@@ -23,16 +14,15 @@ class HLIF3_API UCharacterDemultiplier : public UObject
 {
 	GENERATED_BODY()
 
-public:
-
-	UPROPERTY(EditAnywhere,BlueprintReadWrite)
-	ECharacterDemultiplier DemultiplierType;
-	
+public:	
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	float Duration;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool OneShot;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool DoesEnd;
 
 protected:
 	UFUNCTION(BlueprintImplementableEvent, Category = "Malus")

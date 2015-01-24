@@ -25,7 +25,7 @@ void UProjectileSpawnerComponent::SpawnExactlyAt(uint32 index, EProjectileType T
 		if ((uint32) SpawnPoints.Num() < index) {
 			DebugUtils::LogString("Spawner:: Error Out of Bound SpawnPoints");
 		}
-		tmp = GetWorld()->SpawnActor<AEnemyProjectile>(AEnemyProjectile::StaticClass(), SpawnPoints[index % SpawnPoints.Num()], FRotator(0, 0, 0));
+		tmp = GetWorld()->SpawnActor<AEnemyProjectile>(EnemyClass, SpawnPoints[index % SpawnPoints.Num()], FRotator(0, 0, 0));
 		tmp->SetProperties(IdCount, Type);
 
 		EnemiesMap[IdCount] = tmp;
