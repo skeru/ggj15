@@ -185,6 +185,7 @@ FakesAssemblies/
 #Bin
 HLif3/Binaries/*
 HLif3/Intermediate/*
+HLif3/Saved/*
 
 #Starter Content
 HLif3/Content/StarterContent/*
