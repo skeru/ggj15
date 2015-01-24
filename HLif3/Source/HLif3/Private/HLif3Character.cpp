@@ -3,6 +3,7 @@
 #include "HLif3.h"
 #include "HLif3Character.h"
 #include "HLif3Projectile.h"
+#include "Character/CharacterDemultiplier.h"
 #include "Animation/AnimInstance.h"
 
 
@@ -139,4 +140,32 @@ void AHLif3Character::LookUpAtRate(float Rate)
 {
 	// calculate delta for this frame from the rate information
 	AddControllerPitchInput(Rate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
+}
+
+void AHLif3Character::ApplyDemultiplier(UCharacterDemultiplier * Demux)
+{
+	FCharacterDemultiplierItem item;
+	item.Demux = Demux;
+	item.StartTime = this->GetWorld()->TimeSeconds;
+
+	Demux->StartApply(this);
+	Demuxes.Add(item);
+}
+
+void AHLif3Character::Tick(float DeltaSeconds)
+{
+	for (int i = 0; i < Demuxes.Num(); i++)
+	{
+		float duration = GetWorld()->TimeSince(Demuxes[i].StartTime);
+
+
+		if (duration >= Demuxes[i].Demux->Duration)
+		{
+			Demuxes[i].Demux->StopApply(this);
+		}
+		else
+		{
+			Demuxes[i].Demux->Apply(this, duration);
+		}
+	}
 }
