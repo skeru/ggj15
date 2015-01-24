@@ -154,18 +154,18 @@ void AHLif3Character::ApplyDemultiplier(UCharacterDemultiplier * Demux)
 
 void AHLif3Character::Tick(float DeltaSeconds)
 {
-	for (auto & demux : Demuxes)
+	for (int i = 0; i < Demuxes.Num(); i++)
 	{
-		float duration = GetWorld()->TimeSince(demux.StartTime);
+		float duration = GetWorld()->TimeSince(Demuxes[i].StartTime);
 
-		if (duration >= demux.Demux->Duration)
+
+		if (duration >= Demuxes[i].Demux->Duration)
 		{
-			demux.Demux->StopApply(this);
-			//Demuxes.RemoveSingle(demux);
+			Demuxes[i].Demux->StopApply(this);
 		}
 		else
 		{
-			demux.Demux->Apply(this, duration);
+			Demuxes[i].Demux->Apply(this, duration);
 		}
 	}
 }
