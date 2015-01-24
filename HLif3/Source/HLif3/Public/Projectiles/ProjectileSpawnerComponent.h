@@ -3,6 +3,8 @@
 #pragma once
 
 #include "Components/ActorComponent.h"
+#include "CustomUtils/DataUtils.h"
+#include "EnemyProjectile.h"
 #include "ProjectileSpawnerComponent.generated.h"
 
 /**
@@ -22,9 +24,16 @@ public:
 	
 	//spawn
 	UFUNCTION(BlueprintCallable, Category = "Spawn")
-	void SpawnExactlyAt(uint32 index);
+	void SpawnExactlyAt(uint32 index, EProjectileType Type);
 
 	UFUNCTION(BlueprintCallable, Category = "Spawn")
-	void SpawnAtRandom();
-	
+	void SpawnAtRandom(EProjectileType Type);
+
+private:
+	uint32 IdCount;
+
+	Utils::hashmap<uint32, AEnemyProjectile*> EnemiesMap;
+
+	//over maxID Id start again from 0
+	const uint32 maxID = 5000;
 };

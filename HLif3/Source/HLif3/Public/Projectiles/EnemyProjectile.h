@@ -15,9 +15,16 @@ class HLIF3_API AEnemyProjectile : public AActor
 	GENERATED_BODY()
 public:
 	EProjectileType Type;
+	UStaticMeshComponent* mesh;
 
 public:
 	AEnemyProjectile(const FObjectInitializer& ObjectInitializer);
 	
-	
+	void SetProperties(uint32 NewId, EProjectileType NewType);
+
+	uint32 GetId();
+
+private:
+	uint32 Id;
+	void UpdateMesh();
 };
