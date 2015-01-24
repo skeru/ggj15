@@ -52,13 +52,13 @@ namespace std
 namespace Utils
 {
 	//------------------------------ HASHMAP TOOLS -------------------------
-	template<class datatype> using FHashMap = std::unordered_map <FString, datatype>;
+	template<class datatype> using FHashMap = std::unordered_map < FString, datatype > ;
 
-	template<typename type1, typename type2> using hashmap = std::unordered_map < type1, type2 >;
+	template<typename type1, typename type2> using hashmap = std::unordered_map < type1, type2 > ;
 
-	template <class datatype> using FMap = std::map < FString, datatype >;
+	template <class datatype> using FMap = std::map < FString, datatype > ;
 
-	template<typename type1, typename type2> using map = std::map < type1, type2 >;
+	template<typename type1, typename type2> using map = std::map < type1, type2 > ;
 
 	template<typename t> TArray<FString> GetIdList(Utils::FHashMap<t> map)
 	{
@@ -136,3 +136,4 @@ namespace Utils
 		}
 		return false;
 	}
+}
