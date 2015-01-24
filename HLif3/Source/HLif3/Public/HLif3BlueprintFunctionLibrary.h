@@ -15,5 +15,5 @@ class HLIF3_API UHLif3BlueprintFunctionLibrary : public UBlueprintFunctionLibrar
 
 public:
 	UFUNCTION(BlueprintCallable, Category = "HLif3 Global Functions")
-	static UCharacterDemultiplier * CreateCharacterDemux();
+	static UCharacterDemultiplier * CreateCharacterDemux(TSubclassOf<UCharacterDemultiplier> Demux, AActor * Owner);
 };

@@ -16,7 +16,7 @@ void UCharacterDemultiplier::Apply(class AHLif3Character * Target, float Time)
 
 void UCharacterDemultiplier::StopApply(class AHLif3Character * Target)
 {
-	this->StopApply(Target);
+	this->OnStopApply(Target);
 }
 
 

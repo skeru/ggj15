@@ -156,16 +156,15 @@ void AHLif3Character::Tick(float DeltaSeconds)
 {
 	for (int i = 0; i < Demuxes.Num(); i++)
 	{
-		float duration = GetWorld()->TimeSince(Demuxes[i].StartTime);
+		float duration = GetWorld()->TimeSeconds - Demuxes[i].StartTime;
 
+		Demuxes[i].Demux->Apply(this, duration);
 
-		if (duration >= Demuxes[i].Demux->Duration)
+		if (Demuxes[i].Demux->DoesEnd && duration >= Demuxes[i].Demux->Duration)
 		{
 			Demuxes[i].Demux->StopApply(this);
-		}
-		else
-		{
-			Demuxes[i].Demux->Apply(this, duration);
+			Demuxes.RemoveAt(i);
+			break;
 		}
 	}
 }
