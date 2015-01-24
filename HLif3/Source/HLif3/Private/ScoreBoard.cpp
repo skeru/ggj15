@@ -15,4 +15,5 @@ AScoreBoard::AScoreBoard(const FObjectInitializer& ObjectInitializer)
 void AScoreBoard::AddPoints(float Value)
 {
 	Points += Value;
+	OnPointsUpdate();
 }

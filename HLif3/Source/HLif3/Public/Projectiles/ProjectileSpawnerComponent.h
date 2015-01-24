@@ -10,7 +10,7 @@
 /**
  * 
  */
-UCLASS()
+UCLASS(Blueprintable)
 class HLIF3_API UProjectileSpawnerComponent : public UActorComponent
 {
 	GENERATED_BODY()
@@ -29,9 +29,13 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Spawn")
 	void SpawnAtRandom(EProjectileType Type);
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Spawn")
+	TSubclassOf<AEnemyProjectile>  EnemyClass;
+
 private:
 	uint32 IdCount;
 
+	//<id,enemyActor*>
 	Utils::hashmap<uint32, AEnemyProjectile*> EnemiesMap;
 
 	//over maxID Id start again from 0
