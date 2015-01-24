@@ -161,7 +161,7 @@ void AHLif3Character::Tick(float DeltaSeconds)
 		if (duration >= demux.Demux->Duration)
 		{
 			demux.Demux->StopApply(this);
-			Demuxes.RemoveSingle(demux);
+			//Demuxes.RemoveSingle(demux);
 		}
 		else
 		{
