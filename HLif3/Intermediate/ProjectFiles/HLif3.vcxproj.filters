@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\HLif3.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{9C67D132-2A5B-4673-8735-D1AC2BA23EC4}</UniqueIdentifier>
+      <UniqueIdentifier>{FDDBCAFB-D2F8-4FE6-8CFA-8C4A74C6C571}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\HLif3.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{33215694-A608-459C-BC82-04692CDE22AD}</UniqueIdentifier>
+      <UniqueIdentifier>{48474C27-25DC-44E0-A66A-1ABB21EC8E6B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,13 +27,13 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\HLif3">
-      <UniqueIdentifier>{E88CEF21-D196-4E83-8834-124201D026CA}</UniqueIdentifier>
+      <UniqueIdentifier>{354383B2-37DA-40E9-B1AF-6ACA77809ED1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\HLif3\HLif3.Build.cs">
       <Filter>Source\HLif3</Filter>
     </None>
     <Filter Include="Source\HLif3\Private">
-      <UniqueIdentifier>{7BFAF3AC-A171-4694-9E79-4028296CD4D1}</UniqueIdentifier>
+      <UniqueIdentifier>{1598BF6B-0457-4A05-9DF8-F28724BAE8A4}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\HLif3\Private\HLif3.cpp">
       <Filter>Source\HLif3\Private</Filter>
@@ -50,11 +50,17 @@
     <ClCompile Include="..\..\Source\HLif3\Private\HLif3Projectile.cpp">
       <Filter>Source\HLif3\Private</Filter>
     </ClCompile>
-    <Filter Include="Source\HLif3\Private\CustomUtils">
-      <UniqueIdentifier>{CCB06386-5AA1-4D5B-9DBC-976FC44DB2F5}</UniqueIdentifier>
+    <Filter Include="Source\HLif3\Private\Projectiles">
+      <UniqueIdentifier>{3938CE4E-C7EC-4DBA-97B6-86D73587E874}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\HLif3\Private\Projectiles\EnemyProjectile.cpp">
+      <Filter>Source\HLif3\Private\Projectiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\HLif3\Private\Projectiles\ProjectileSpawnerComponent.cpp">
+      <Filter>Source\HLif3\Private\Projectiles</Filter>
+    </ClCompile>
     <Filter Include="Source\HLif3\Public">
-      <UniqueIdentifier>{047BB5A8-582E-40FA-A7C4-D717D92BC872}</UniqueIdentifier>
+      <UniqueIdentifier>{291DF39B-1AB3-428A-B09D-4489BB624DAB}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\HLif3\Public\HLif3.h">
       <Filter>Source\HLif3\Public</Filter>
@@ -72,7 +78,7 @@
       <Filter>Source\HLif3\Public</Filter>
     </ClInclude>
     <Filter Include="Source\HLif3\Public\CustomUtils">
-      <UniqueIdentifier>{0A521B87-1A2C-4A13-8513-F60337262F0B}</UniqueIdentifier>
+      <UniqueIdentifier>{6568539D-F8BC-4C3E-83DA-83884BD3A1B9}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\HLif3\Public\CustomUtils\DataUtils.h">
       <Filter>Source\HLif3\Public\CustomUtils</Filter>
@@ -80,11 +86,26 @@
     <ClInclude Include="..\..\Source\HLif3\Public\CustomUtils\DebugUtils.h">
       <Filter>Source\HLif3\Public\CustomUtils</Filter>
     </ClInclude>
+    <Filter Include="Source\HLif3\Public\Projectiles">
+      <UniqueIdentifier>{D561CE9D-D313-4E19-B64E-17F27C5C2A08}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\HLif3\Public\Projectiles\EnemyProjectile.h">
+      <Filter>Source\HLif3\Public\Projectiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HLif3\Public\Projectiles\ProjectileListener.h">
+      <Filter>Source\HLif3\Public\Projectiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HLif3\Public\Projectiles\ProjectileSpawnerComponent.h">
+      <Filter>Source\HLif3\Public\Projectiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\HLif3\Public\Projectiles\ProjectileType.h">
+      <Filter>Source\HLif3\Public\Projectiles</Filter>
+    </ClInclude>
     <Filter Include="Source\HLif3\Resources">
-      <UniqueIdentifier>{D158DD4C-8130-47B9-A117-132949C1BE78}</UniqueIdentifier>
+      <UniqueIdentifier>{3C774F04-02EC-43CD-8C1E-AB982FE145E0}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source\HLif3\Resources\Windows">
-      <UniqueIdentifier>{CE7B69B0-F39C-44ED-A09C-BE1D0900DC19}</UniqueIdentifier>
+      <UniqueIdentifier>{29CCE28B-6A8E-4C36-BC43-8BF912C11D34}</UniqueIdentifier>
     </Filter>
     <ResourceCompile Include="..\..\Source\HLif3\Resources\Windows\HLif3.rc">
       <Filter>Source\HLif3\Resources\Windows</Filter>
