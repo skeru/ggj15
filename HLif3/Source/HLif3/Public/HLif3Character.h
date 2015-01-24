@@ -1,7 +1,22 @@
 // Copyright 1998-2014 Epic Games, Inc. All Rights Reserved.
 #pragma once
 #include "GameFramework/Character.h"
+#include "Array.h"
 #include "HLif3Character.generated.h"
+
+class UCharacterDemultiplier;
+
+USTRUCT()
+struct FCharacterDemultiplierItem
+{
+	GENERATED_USTRUCT_BODY()
+
+	UPROPERTY()
+	class UCharacterDemultiplier * Demux;
+
+	UPROPERTY()
+	float StartTime;
+};
 
 UCLASS(config=Game)
 class AHLif3Character : public ACharacter
@@ -15,8 +30,14 @@ class AHLif3Character : public ACharacter
 	/** First person camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* FirstPersonCameraComponent;
+
+	UPROPERTY()
+	TArray<FCharacterDemultiplierItem> Demuxes;
+
 public:
 	AHLif3Character(const FObjectInitializer& ObjectInitializer);
+
+
 
 	/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
@@ -73,10 +94,15 @@ protected:
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 	// End of APawn interface
 
+	virtual void Tick(float DeltaSeconds) override;
+
 public:
 	/** Returns Mesh1P subobject **/
 	FORCEINLINE class USkeletalMeshComponent* GetMesh1P() const { return Mesh1P; }
 	/** Returns FirstPersonCameraComponent subobject **/
 	FORCEINLINE class UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
+
+	UFUNCTION(BlueprintCallable, Category = "Malus")
+	void ApplyDemultiplier(UCharacterDemultiplier * Demux);
 };
 
