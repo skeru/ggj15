@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\HLif3.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{381EB51E-CCAC-4B29-B209-6D4A14504C0D}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\HLif3.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\HLif3Editor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{8DE37644-00D7-45A2-A284-8206FC0B1C8F}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultInput.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\HLif3">
+			<UniqueIdentifier>{A85C9B22-0297-4FC7-B05F-E67EF5F240CE}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\HLif3\HLif3.Build.cs">
+			<Filter>Source\HLif3</Filter>
+		</None >
+		<Filter Include="Source\HLif3\Private">
+			<UniqueIdentifier>{544B812C-4223-4082-A08D-A73ADEFA23AD}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Source\HLif3\Private\HLif3.cpp">
+			<Filter>Source\HLif3\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Source\HLif3\Private\HLif3Character.cpp">
+			<Filter>Source\HLif3\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Source\HLif3\Private\HLif3GameMode.cpp">
+			<Filter>Source\HLif3\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Source\HLif3\Private\HLif3HUD.cpp">
+			<Filter>Source\HLif3\Private</Filter>
+		</ClCompile >
+		<ClCompile Include="..\..\Source\HLif3\Private\HLif3Projectile.cpp">
+			<Filter>Source\HLif3\Private</Filter>
+		</ClCompile >
+		<Filter Include="Source\HLif3\Public">
+			<UniqueIdentifier>{565FEFB0-CDFF-46D2-8740-9EA2F0A3939D}</UniqueIdentifier>
+		</Filter>
+		<ClInclude Include="..\..\Source\HLif3\Public\HLif3.h">
+			<Filter>Source\HLif3\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\HLif3\Public\HLif3Character.h">
+			<Filter>Source\HLif3\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\HLif3\Public\HLif3GameMode.h">
+			<Filter>Source\HLif3\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\HLif3\Public\HLif3HUD.h">
+			<Filter>Source\HLif3\Public</Filter>
+		</ClInclude >
+		<ClInclude Include="..\..\Source\HLif3\Public\HLif3Projectile.h">
+			<Filter>Source\HLif3\Public</Filter>
+		</ClInclude >
+		<Filter Include="Source\HLif3\Resources">
+			<UniqueIdentifier>{838D2194-25D6-4C5F-8B71-24A094DFCB73}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="Source\HLif3\Resources\Windows">
+			<UniqueIdentifier>{312C938B-A0EB-4127-ACE7-EE086A1860C6}</UniqueIdentifier>
+		</Filter>
+		<ResourceCompile Include="..\..\Source\HLif3\Resources\Windows\HLif3.rc">
+			<Filter>Source\HLif3\Resources\Windows</Filter>
+		</ResourceCompile >
+	</ItemGroup>
+</Project>
