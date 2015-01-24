@@ -182,6 +182,9 @@ UpgradeLog*.htm
 # Microsoft Fakes
 FakesAssemblies/
 
+#Bin
+HLif3/Binaries/*
+HLif3/Intermediate/*
 
 #Starter Content
 HLif3/Content/StarterContent/*
@@ -196,3 +199,4 @@ HLif3/Content/Character/SM_Projectile.uasset
 HLif3/Content/Meshes/TemplateCube_Rounded.uasset
 HLif3/Content/Textures/Crosshair.uasset
 HLif3/Content/Maps/Example_Map.umap
+HLif3/Saved/AutoScreenshot.png
