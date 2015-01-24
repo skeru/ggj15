@@ -26,14 +26,8 @@ namespace std
 	{
 		const size_t operator()(const FString& p)
 		{
-			try
-			{
-				return (p.GetCharArray().GetData()) ? std::hash<std::wstring>()(std::wstring((wchar_t*)(p.GetCharArray().GetData()))) : 0;
-			}
-			catch (std::exception e)
-			{
-				return 0;
-			}
+
+			return (p.GetCharArray().GetData()) ? std::hash<std::wstring>()(std::wstring((wchar_t*)(p.GetCharArray().GetData()))) : 0;
 		};
 	};
 
@@ -111,12 +105,10 @@ namespace Utils
 	{
 		if (string.IsNumeric())
 		{
-			try
-			{
-				output = FCString::Atof(*string);
-				return true;
-			}
-			catch (std::exception e){}
+
+			output = FCString::Atof(*string);
+			return true;
+
 		}
 		return false;
 	}
@@ -127,12 +119,8 @@ namespace Utils
 	{
 		if (string.IsNumeric())
 		{
-			try
-			{
-				output = FCString::Atoi(*string);
-				return true;
-			}
-			catch (std::exception e){}
+			output = FCString::Atoi(*string);
+			return true;
 		}
 		return false;
 	}
