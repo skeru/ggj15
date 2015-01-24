@@ -12,7 +12,7 @@ UProjectileSpawnerComponent::UProjectileSpawnerComponent(const FObjectInitialize
 {
 	SpawnPoints = TArray<FVector>();
 	SpawnPoints.Add(FVector(0, 0, 0));
-	IdCount = 0;
+	IdCount = 1;
 	EnemiesMap = Utils::hashmap<uint32, AEnemyProjectile*>();
 
 	std::srand(std::time(0));
