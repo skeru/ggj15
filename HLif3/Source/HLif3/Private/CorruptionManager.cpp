@@ -12,7 +12,6 @@ ACorruptionManager::ACorruptionManager(const FObjectInitializer& ObjectInitializ
 {
 	CorruptionLevel = 0.f;
 	DestructibleIndex = -1;
-	OnCorruptionUpdate();
 }
 
 void ACorruptionManager::OnCorruptionIncrease(float Value)
