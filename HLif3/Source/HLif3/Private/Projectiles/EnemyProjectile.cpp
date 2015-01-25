@@ -27,6 +27,7 @@ void AEnemyProjectile::SetProperties(uint32 NewId, EProjectileType NewType)
 	Id = NewId;
 	Type = NewType;
 	UpdateMesh();
+	Descriptor = GetDefaultDescriptor(NewType);
 }
 
 uint32 AEnemyProjectile::GetId()
@@ -83,4 +84,61 @@ void AEnemyProjectile::UpdateMesh()
 	if (m != nullptr) {
 		ActualMesh->SetSkeletalMesh(m);
 	}
+}
+
+FEnemyDescriptor AEnemyProjectile::GetDefaultDescriptor(EProjectileType Type)
+{
+	FEnemyDescriptor d = FEnemyDescriptor();	//default values
+	switch (Type)
+	{
+	case EProjectileType::Type1:	//SPAM can
+		d.Health = 3;
+		d.Speed = 1.0f;
+		d.Movement = EMovementType::Flying;
+		d.Target = EEnemyTarget::Environment;
+		d.Attak = EEnemyAttakType::Kamikaze;
+		break;
+	case EProjectileType::Type2:	//DickTits
+		d.Health = 3;
+		d.Speed = 1.0f;
+		d.Movement = EMovementType::Walking;
+		d.Target = EEnemyTarget::Environment;
+		d.Attak = EEnemyAttakType::PhisicalDamage;
+		break;
+	case EProjectileType::Type3:	//loadingIcon
+		d.Health = 1;
+		d.Speed = 0.9f;
+		d.Movement = EMovementType::Flying;
+		d.Target = EEnemyTarget::Player;
+		d.Attak = EEnemyAttakType::Kamikaze;
+		break;
+	case EProjectileType::Type4:	//pedobear
+		d.Health = 20;
+		d.Speed = 1.0f;
+		d.Movement = EMovementType::Walking;
+		d.Target = EEnemyTarget::Environment;
+		d.Attak = EEnemyAttakType::Fire;
+		break;
+	case EProjectileType::Type5:	//pony
+		d.Health = 1;
+		d.Speed = 1.0f;
+		d.Movement = EMovementType::Walking;
+		d.Target = EEnemyTarget::Enemies;
+		d.Attak = EEnemyAttakType::Buff;
+		break;
+	case EProjectileType::Type6:	//dolphin
+		d.Health = 1;
+		d.Speed = 1.0f;
+		d.Movement = EMovementType::Walking;
+		d.Target = EEnemyTarget::EnemiesOrPlayer;
+		d.Attak = EEnemyAttakType::Debuf;
+		break;
+	case EProjectileType::Type7:
+		
+		break;
+	default:
+		
+		break;
+	}
+	return d;
 }
