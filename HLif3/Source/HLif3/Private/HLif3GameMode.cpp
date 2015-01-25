@@ -15,3 +15,9 @@ AHLif3GameMode::AHLif3GameMode(const FObjectInitializer& ObjectInitializer)
 	// use our custom HUD class
 	HUDClass = AHLif3HUD::StaticClass();
 }
+
+void AHLif3GameMode::EditFringeIntensity(APostProcessVolume  * Volume, float Amount)
+{
+	Volume->Settings.bOverride_SceneFringeIntensity = true;
+	Volume->Settings.SceneFringeIntensity = Amount;
+}

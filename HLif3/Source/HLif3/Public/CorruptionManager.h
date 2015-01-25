@@ -15,11 +15,12 @@ class HLIF3_API ACorruptionManager : public AActor
 {
 	GENERATED_BODY()
 
-private:
-	/** Maximun Level of Corruption*/
-	float m_maxCorruption = 100;
-	
 public:
+
+	/** Maximun Level of Corruption*/
+	UPROPERTY(BlueprintReadWrite)
+	float MaxCorruption = 100;
+
 	ACorruptionManager(const FObjectInitializer& ObjectInitializer);
 
 	/** Level Corruption */

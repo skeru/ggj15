@@ -12,7 +12,6 @@ ACorruptionManager::ACorruptionManager(const FObjectInitializer& ObjectInitializ
 {
 	CorruptionLevel = 0.f;
 	DestructibleIndex = -1;
-	OnCorruptionUpdate();
 }
 
 void ACorruptionManager::OnCorruptionIncrease(float Value)
@@ -26,7 +25,7 @@ void ACorruptionManager::OnCorruptionIncrease(float Value)
 		
 		OnCorruptionUpdate();
 
-		if (IsCorruptionOver(m_maxCorruption))
+		if (IsCorruptionOver(MaxCorruption))
 		{
 			OnGameEnd();
 		}

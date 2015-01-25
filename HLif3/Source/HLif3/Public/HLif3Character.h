@@ -63,6 +63,24 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 	class UAnimMontage* FireAnimation;
 
+	UFUNCTION(BlueprintCallable, Category = "Input Modifier")
+	void DisableForward(bool Disable);
+
+	UFUNCTION(BlueprintCallable, Category = "Input Modifier")
+	void DisableSide(bool Disable);
+
+	UFUNCTION(BlueprintCallable, Category = "Input Modifier")
+	void DisableJump(bool Disable);
+
+	UFUNCTION(BlueprintCallable, Category = "Input Modifier")
+	void DisableFire(bool Disable);
+
+	UFUNCTION(BlueprintCallable, Category = "Input Modifier")
+	void DisableLookUp(bool Disable);
+
+	UFUNCTION(BlueprintCallable, Category = "Input Modifier")
+	void DisableTurn(bool Disable);
+
 protected:
 
 	/** Handler for a touch input beginning. */
@@ -77,17 +95,35 @@ protected:
 	/** Handles stafing movement, left and right */
 	void MoveRight(float Val);
 
+	void AddYawInput(float Val);
+
+	void AddPitchInput(float Val);
+
 	/**
 	 * Called via input to turn at a given rate.
 	 * @param Rate	This is a normalized rate, i.e. 1.0 means 100% of desired turn rate
 	 */
 	void TurnAtRate(float Rate);
 
+	void ExecuteJump();
+
 	/**
 	 * Called via input to turn look up/down at a given rate.
 	 * @param Rate	This is a normalized rate, i.e. 1.0 means 100% of desired turn rate
 	 */
 	void LookUpAtRate(float Rate);
+
+	bool ForwardDisabled;
+
+	bool SideDisabled;
+
+	bool FireDisabled;
+
+	bool JumpDisabled;
+
+	bool LookUpDisabled;
+
+	bool TurnDisabled;
 
 protected:
 	// APawn interface

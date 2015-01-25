@@ -49,7 +49,7 @@ void AHLif3Character::SetupPlayerInputComponent(class UInputComponent* InputComp
 	// set up gameplay key bindings
 	check(InputComponent);
 
-	InputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
+	InputComponent->BindAction("Jump", IE_Pressed, this, &AHLif3Character::ExecuteJump);
 	InputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 	
 	InputComponent->BindAction("Fire", IE_Pressed, this, &AHLif3Character::OnFire);
@@ -61,14 +61,19 @@ void AHLif3Character::SetupPlayerInputComponent(class UInputComponent* InputComp
 	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
 	// "turn" handles devices that provide an absolute delta, such as a mouse.
 	// "turnrate" is for devices that we choose to treat as a rate of change, such as an analog joystick
-	InputComponent->BindAxis("Turn", this, &APawn::AddControllerYawInput);
+	InputComponent->BindAxis("Turn", this, &AHLif3Character::AddYawInput);
 	InputComponent->BindAxis("TurnRate", this, &AHLif3Character::TurnAtRate);
-	InputComponent->BindAxis("LookUp", this, &APawn::AddControllerPitchInput);
+	InputComponent->BindAxis("LookUp", this, &AHLif3Character::AddPitchInput);
 	InputComponent->BindAxis("LookUpRate", this, &AHLif3Character::LookUpAtRate);
 }
 
 void AHLif3Character::OnFire()
 {
+	if (FireDisabled)
+	{
+		return;
+	}
+
 	// try and fire a projectile
 	if (ProjectileClass != NULL)
 	{
@@ -114,6 +119,11 @@ void AHLif3Character::TouchStarted(const ETouchIndex::Type FingerIndex, const FV
 
 void AHLif3Character::MoveForward(float Value)
 {
+	if (ForwardDisabled)
+	{
+		return;
+	}
+
 	if (Value != 0.0f)
 	{
 		// add movement in that direction
@@ -123,6 +133,11 @@ void AHLif3Character::MoveForward(float Value)
 
 void AHLif3Character::MoveRight(float Value)
 {
+	if (SideDisabled)
+	{
+		return;
+	}
+
 	if (Value != 0.0f)
 	{
 		// add movement in that direction
@@ -130,14 +145,35 @@ void AHLif3Character::MoveRight(float Value)
 	}
 }
 
+void AHLif3Character::ExecuteJump()
+{
+	if (JumpDisabled)
+	{
+		return;
+	}
+
+	bPressedJump = true;
+	JumpKeyHoldTime = 0.0f;
+}
+
 void AHLif3Character::TurnAtRate(float Rate)
 {
+	if (TurnDisabled)
+	{
+		return;
+	}
+
 	// calculate delta for this frame from the rate information
 	AddControllerYawInput(Rate * BaseTurnRate * GetWorld()->GetDeltaSeconds());
 }
 
 void AHLif3Character::LookUpAtRate(float Rate)
 {
+	if (LookUpDisabled)
+	{
+		return;
+	}
+
 	// calculate delta for this frame from the rate information
 	AddControllerPitchInput(Rate * BaseLookUpRate * GetWorld()->GetDeltaSeconds());
 }
@@ -158,13 +194,75 @@ void AHLif3Character::Tick(float DeltaSeconds)
 	{
 		float duration = GetWorld()->TimeSeconds - Demuxes[i].StartTime;
 
-		Demuxes[i].Demux->Apply(this, duration);
-
-		if (Demuxes[i].Demux->DoesEnd && duration >= Demuxes[i].Demux->Duration)
+		if (Demuxes[i].Demux->OneShot )
 		{
-			Demuxes[i].Demux->StopApply(this);
-			Demuxes.RemoveAt(i);
-			break;
+			if (Demuxes[i].Demux->DoesEnd)
+			{
+				Demuxes[i].Demux->StopApply(this);
+				Demuxes.RemoveAt(i);
+				break;
+			}
+		}
+		else
+		{
+			Demuxes[i].Demux->Apply(this, duration);
+
+			if (Demuxes[i].Demux->DoesEnd && duration >= Demuxes[i].Demux->Duration)
+			{
+				Demuxes[i].Demux->StopApply(this);
+				Demuxes.RemoveAt(i);
+				break;
+			}
 		}
 	}
+}
+
+void AHLif3Character::DisableForward(bool Disable)
+{
+	ForwardDisabled = Disable;
+}
+
+void AHLif3Character::DisableSide(bool Disable)
+{
+	SideDisabled = Disable;
+}
+
+void AHLif3Character::DisableJump(bool Disable)
+{
+	JumpDisabled = Disable;
+}
+
+void AHLif3Character::DisableFire(bool Disable)
+{
+	FireDisabled = Disable;
+}
+
+void AHLif3Character::DisableLookUp(bool Disable)
+{
+	LookUpDisabled = Disable;
+}
+
+void AHLif3Character::DisableTurn(bool Disable)
+{
+	TurnDisabled = Disable;
+}
+
+void AHLif3Character::AddYawInput(float Val)
+{
+	if (TurnDisabled)
+	{
+		return;
+	}
+
+	this->AddControllerYawInput(Val);
+}
+
+void AHLif3Character::AddPitchInput(float Val)
+{
+	if (LookUpDisabled)
+	{
+		return;
+	}
+
+	this->AddControllerPitchInput(Val);
 }
