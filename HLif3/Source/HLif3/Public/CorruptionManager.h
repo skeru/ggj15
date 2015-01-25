@@ -76,7 +76,7 @@ protected:
 	/** Checks Level Corruption if it's over a value*/
 	bool IsCorruptionOver(float Value);
 	/** Checks if Level Corruption should cause Demux*/
-	bool ShouldApplyDeux();
+	bool ShouldApplyDemux();
 	/** Checks if Level Corruption should stop Demux*/
 	bool ShouldStopDemux();
 
