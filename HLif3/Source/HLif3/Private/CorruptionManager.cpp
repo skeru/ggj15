@@ -13,12 +13,6 @@ ACorruptionManager::ACorruptionManager(const FObjectInitializer& ObjectInitializ
 	CorruptionLevel = 0.f;
 	DestructibleIndex = -1;
 	DemuxIndex = 0;
-
-	/**if (DemuxLevels.Num() < DemuxLenght)
-	{
-		UE_LOG(LogTemp, Error, TEXT("Error: Demux Levels Array is not correct lenght"));
-		DemuxLevels.Reset(DemuxLenght);
-	}*/
 }
 
 void ACorruptionManager::OnCorruptionIncrease(float Value)
@@ -37,6 +31,12 @@ void ACorruptionManager::OnCorruptionIncrease(float Value)
 		{
 			ApplyDemux(DemuxIndex);
 			DemuxIndex++;
+		}
+		else
+		if (ShouldStopDemux())
+		{
+			StopDemux(DemuxIndex);
+			DemuxIndex--;
 		}
 
 		OnCorruptionUpdate();
@@ -84,6 +84,34 @@ bool ACorruptionManager::ShouldApplyDemux()
 	}
 
 	return shouldApply;
+}
+
+bool ACorruptionManager::ShouldStopDemux()
+{
+	bool shouldStop = false;
+
+	switch ((uint32)DemuxIndex)
+	{
+	default:
+		break;
+	case 0:
+		shouldStop = CorruptionLevel < DemuxLevels[0];
+		break;
+	case 1:
+		shouldStop = CorruptionLevel < DemuxLevels[1];
+		break;
+	case 2:
+		shouldStop = CorruptionLevel < DemuxLevels[2];
+		break;
+	case 3:
+		shouldStop = CorruptionLevel < DemuxLevels[3];
+		break;
+	case 4:
+		shouldStop = CorruptionLevel < DemuxLevels[4];
+		break;
+	}
+
+	return shouldStop;
 }
 
 

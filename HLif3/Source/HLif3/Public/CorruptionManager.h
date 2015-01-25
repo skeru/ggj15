@@ -64,6 +64,10 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = Gameplay)
 		void ApplyDemux(float Value);
 
+	/** called when something enters the sphere component */
+	UFUNCTION(BlueprintImplementableEvent, Category = Gameplay)
+		void StopDemux(float Value);
+
 	/** Ends The Game*/
 	UFUNCTION(BlueprintImplementableEvent, Category = Gameplay)
 		void OnGameEnd();
@@ -72,6 +76,8 @@ protected:
 	/** Checks Level Corruption if it's over a value*/
 	bool IsCorruptionOver(float Value);
 	/** Checks if Level Corruption should cause Demux*/
-	bool ShouldApplyDemux();
+	bool ShouldApplyDeux();
+	/** Checks if Level Corruption should stop Demux*/
+	bool ShouldStopDemux();
 
 };

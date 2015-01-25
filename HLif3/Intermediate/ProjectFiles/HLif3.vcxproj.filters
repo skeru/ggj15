@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\HLif3.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{1EEB7558-DA98-4563-B962-DECD145E182C}</UniqueIdentifier>
+			<UniqueIdentifier>{2874DCC6-E864-4E52-824E-5020EAC1709E}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\HLif3.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{311DFA50-DC6E-4A81-A369-2699A68E0DA0}</UniqueIdentifier>
+			<UniqueIdentifier>{A2D20EC6-5B09-4F73-938B-05557764A90E}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -28,13 +28,13 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Source\HLif3">
-			<UniqueIdentifier>{020918AE-5876-4BB7-8A21-F0A34F1344D0}</UniqueIdentifier>
+			<UniqueIdentifier>{F11CE4C9-5E8C-4848-BBC1-807DCF5B824B}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\HLif3\HLif3.Build.cs">
 			<Filter>Source\HLif3</Filter>
 		</None >
 		<Filter Include="Source\HLif3\Private">
-			<UniqueIdentifier>{ECF8080B-1C79-4DD3-AB37-651FAAB5DE43}</UniqueIdentifier>
+			<UniqueIdentifier>{BFB2B383-E9B7-4063-8AA3-1DBA70792CD3}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Source\HLif3\Private\CorruptionManager.cpp">
 			<Filter>Source\HLif3\Private</Filter>
@@ -67,13 +67,13 @@
 			<Filter>Source\HLif3\Private</Filter>
 		</ClCompile >
 		<Filter Include="Source\HLif3\Private\Character">
-			<UniqueIdentifier>{03CCF468-5F4E-49CF-BFD2-E20956A1F071}</UniqueIdentifier>
+			<UniqueIdentifier>{B1122D19-0474-4DA8-8106-C9F0B107DAFD}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Source\HLif3\Private\Character\CharacterDemultiplier.cpp">
 			<Filter>Source\HLif3\Private\Character</Filter>
 		</ClCompile >
 		<Filter Include="Source\HLif3\Private\CustomUtils">
-			<UniqueIdentifier>{A07BD7E5-4D9B-494C-83D7-3A9D9E18627A}</UniqueIdentifier>
+			<UniqueIdentifier>{8962953E-71AD-4478-A8D6-4F52B18AE9A8}</UniqueIdentifier>
 		</Filter>
 		<ClCompile Include="..\..\Source\HLif3\Private\CustomUtils\TestTimerActor.cpp">
 			<Filter>Source\HLif3\Private\CustomUtils</Filter>
@@ -82,8 +82,11 @@
 			<Filter>Source\HLif3\Private\CustomUtils</Filter>
 		</ClInclude >
 		<Filter Include="Source\HLif3\Private\Projectiles">
-			<UniqueIdentifier>{138BACF4-7E49-4819-91E4-13DD7C3865CC}</UniqueIdentifier>
+			<UniqueIdentifier>{C513FB9E-21C4-4AC9-8BD0-F7F86DF07D9A}</UniqueIdentifier>
 		</Filter>
+		<ClCompile Include="..\..\Source\HLif3\Private\Projectiles\EnemyModifiers.cpp">
+			<Filter>Source\HLif3\Private\Projectiles</Filter>
+		</ClCompile >
 		<ClCompile Include="..\..\Source\HLif3\Private\Projectiles\EnemyProjectile.cpp">
 			<Filter>Source\HLif3\Private\Projectiles</Filter>
 		</ClCompile >
@@ -91,7 +94,7 @@
 			<Filter>Source\HLif3\Private\Projectiles</Filter>
 		</ClCompile >
 		<Filter Include="Source\HLif3\Public">
-			<UniqueIdentifier>{E792FD01-3A41-4FBF-8674-40CF4CBD2755}</UniqueIdentifier>
+			<UniqueIdentifier>{8DDA1260-F1FF-4B25-80AA-AEEC254028B7}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\Source\HLif3\Public\CorruptionManager.h">
 			<Filter>Source\HLif3\Public</Filter>
@@ -124,13 +127,13 @@
 			<Filter>Source\HLif3\Public</Filter>
 		</ClInclude >
 		<Filter Include="Source\HLif3\Public\Character">
-			<UniqueIdentifier>{50ED49E7-B4EA-4D78-9309-F36109883EC9}</UniqueIdentifier>
+			<UniqueIdentifier>{042BF27D-961C-445B-83B8-19DCF20752DB}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\Source\HLif3\Public\Character\CharacterDemultiplier.h">
 			<Filter>Source\HLif3\Public\Character</Filter>
 		</ClInclude >
 		<Filter Include="Source\HLif3\Public\CustomUtils">
-			<UniqueIdentifier>{E7511B46-E30D-458D-B84E-43227EF302B3}</UniqueIdentifier>
+			<UniqueIdentifier>{593D9AA8-DEDB-4769-A85A-848EC68C5C38}</UniqueIdentifier>
 		</Filter>
 		<ClInclude Include="..\..\Source\HLif3\Public\CustomUtils\DataUtils.h">
 			<Filter>Source\HLif3\Public\CustomUtils</Filter>
@@ -139,8 +142,11 @@
 			<Filter>Source\HLif3\Public\CustomUtils</Filter>
 		</ClInclude >
 		<Filter Include="Source\HLif3\Public\Projectiles">
-			<UniqueIdentifier>{F47AB7C2-32E1-4276-A1A2-7AE556E0A1D0}</UniqueIdentifier>
+			<UniqueIdentifier>{6FFF7D6E-77AD-47C7-A764-25AEA8BEA0DA}</UniqueIdentifier>
 		</Filter>
+		<ClInclude Include="..\..\Source\HLif3\Public\Projectiles\EnemyModifiers.h">
+			<Filter>Source\HLif3\Public\Projectiles</Filter>
+		</ClInclude >
 		<ClInclude Include="..\..\Source\HLif3\Public\Projectiles\EnemyProjectile.h">
 			<Filter>Source\HLif3\Public\Projectiles</Filter>
 		</ClInclude >
@@ -154,10 +160,10 @@
 			<Filter>Source\HLif3\Public\Projectiles</Filter>
 		</ClInclude >
 		<Filter Include="Source\HLif3\Resources">
-			<UniqueIdentifier>{CE64A013-990E-4068-ACBC-E345E668D6CD}</UniqueIdentifier>
+			<UniqueIdentifier>{D241CC3A-46C5-46D4-9C6E-A00DC6B4549B}</UniqueIdentifier>
 		</Filter>
 		<Filter Include="Source\HLif3\Resources\Windows">
-			<UniqueIdentifier>{1B7B6A5B-C918-4606-BE7F-0CDFC82C01BF}</UniqueIdentifier>
+			<UniqueIdentifier>{5BE9CE8B-9BCC-4920-A823-1100783D14AB}</UniqueIdentifier>
 		</Filter>
 		<ResourceCompile Include="..\..\Source\HLif3\Resources\Windows\HLif3.rc">
 			<Filter>Source\HLif3\Resources\Windows</Filter>
