@@ -61,6 +61,7 @@
 		<ClCompile Include="..\..\Source\HLif3\Private\HLif3HUD.cpp" />
 		<ClCompile Include="..\..\Source\HLif3\Private\HLif3Projectile.cpp" />
 		<ClCompile Include="..\..\Source\HLif3\Private\ScoreBoard.cpp" />
+		<ClCompile Include="..\..\Source\HLif3\Private\SoundManager.cpp" />
 		<ClCompile Include="..\..\Source\HLif3\Private\SteHLif3GameMode.cpp" />
 		<ClCompile Include="..\..\Source\HLif3\Private\Character\CharacterDemultiplier.cpp" />
 		<ClCompile Include="..\..\Source\HLif3\Private\CustomUtils\TestTimerActor.cpp" />
@@ -77,6 +78,7 @@
 		<ClInclude Include="..\..\Source\HLif3\Public\HLif3HUD.h" />
 		<ClInclude Include="..\..\Source\HLif3\Public\HLif3Projectile.h" />
 		<ClInclude Include="..\..\Source\HLif3\Public\ScoreBoard.h" />
+		<ClInclude Include="..\..\Source\HLif3\Public\SoundManager.h" />
 		<ClInclude Include="..\..\Source\HLif3\Public\SteHLif3GameMode.h" />
 		<ClInclude Include="..\..\Source\HLif3\Public\Character\CharacterDemultiplier.h" />
 		<ClInclude Include="..\..\Source\HLif3\Public\CustomUtils\DataUtils.h" />

@@ -30,14 +30,20 @@ void ACorruptionManager::OnCorruptionIncrease(float Value)
 		if (ShouldApplyDemux())
 		{
 			ApplyDemux(DemuxIndex);
-			DemuxIndex++;
+			if (DemuxIndex < 4)
+			{
+				DemuxIndex++;
+			}
 		}
-		else
-		if (ShouldStopDemux())
-		{
-			StopDemux(DemuxIndex);
-			DemuxIndex--;
-		}
+		else if (ShouldStopDemux())
+			{
+				StopDemux(DemuxIndex);
+				if (DemuxIndex > 0)
+				{
+					DemuxIndex--;
+				}
+				
+			}
 
 		OnCorruptionUpdate();
 
