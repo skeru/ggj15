@@ -29,15 +29,15 @@ public:
 public:
 	AEnemyProjectile(const FObjectInitializer& ObjectInitializer);
 	
-	void SetProperties(uint32 NewId, EProjectileType NewType);
+	void SetProperties(int32 NewId, EProjectileType NewType);
 
-	uint32 GetId();
+	int32 GetId();
 
 	UFUNCTION(BlueprintCallable, Category = "Descriptor Info")
 	static FEnemyDescriptor GetDefaultDescriptor(EProjectileType Type);
 
 
 private:
-	uint32 Id;
+	int32 Id;
 	void UpdateMesh();
 };
