@@ -24,7 +24,7 @@ public:
 	
 	//spawn
 	UFUNCTION(BlueprintCallable, Category = "Spawn")
-	void SpawnExactlyAt(uint32 index, EProjectileType Type);
+	void SpawnExactlyAt(int32 index, EProjectileType Type);
 
 	UFUNCTION(BlueprintCallable, Category = "Spawn")
 	void SpawnAtRandom(EProjectileType Type);

@@ -18,6 +18,10 @@ AHLif3GameMode::AHLif3GameMode(const FObjectInitializer& ObjectInitializer)
 
 void AHLif3GameMode::EditFringeIntensity(APostProcessVolume  * Volume, float Amount)
 {
-	Volume->Settings.bOverride_SceneFringeIntensity = true;
-	Volume->Settings.SceneFringeIntensity = Amount;
+
+	if (Volume != nullptr)
+	{
+		Volume->Settings.bOverride_SceneFringeIntensity = true;
+		Volume->Settings.SceneFringeIntensity = Amount;
+	}
 }

@@ -32,7 +32,7 @@ enum class EEnemyAttakType
 /**
  * 
  */
-USTRUCT()
+USTRUCT(BlueprintType, Blueprintable)
 struct FEnemyDescriptor
 {
 	GENERATED_USTRUCT_BODY()

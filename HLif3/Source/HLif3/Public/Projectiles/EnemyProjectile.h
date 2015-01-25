@@ -11,11 +11,13 @@
  * 
  */
 UCLASS()
-class HLIF3_API AEnemyProjectile : public AActor
+class HLIF3_API AEnemyProjectile : public ACharacter
 {
 	GENERATED_BODY()
 public:
-	EProjectileType Type;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	EProjectileType PrType;
+
 	USkeletalMeshComponent* ActualMesh;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "3D Models")
@@ -31,6 +33,7 @@ public:
 
 	uint32 GetId();
 
+	UFUNCTION(BlueprintCallable, Category = "Descriptor Info")
 	static FEnemyDescriptor GetDefaultDescriptor(EProjectileType Type);
 
 
