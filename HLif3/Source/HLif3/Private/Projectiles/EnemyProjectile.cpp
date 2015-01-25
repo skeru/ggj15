@@ -22,7 +22,7 @@ AEnemyProjectile::AEnemyProjectile(const FObjectInitializer& ObjectInitializer)
 	Monsters = TArray<USkeletalMesh*>();
 }
 
-void AEnemyProjectile::SetProperties(uint32 NewId, EProjectileType NewType)
+void AEnemyProjectile::SetProperties(int32 NewId, EProjectileType NewType)
 {
 	Id = NewId;
 	PrType = NewType;
@@ -30,7 +30,7 @@ void AEnemyProjectile::SetProperties(uint32 NewId, EProjectileType NewType)
 	Descriptor = GetDefaultDescriptor(NewType);
 }
 
-uint32 AEnemyProjectile::GetId()
+int32 AEnemyProjectile::GetId()
 {
 	return Id;
 }
