@@ -35,6 +35,19 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
 		float DestructiblesLenght;
 
+	/** Demux Index */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
+		float DemuxIndex;
+
+	/** Demux Lenght */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
+		float DemuxLenght;
+
+	/** Demux Levels */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Gameplay)
+		int32 DemuxLevels[5];
+
+
 	/** Add up to Level Corruption*/
 	UFUNCTION(BlueprintCallable, Category = Gameplay)
 		void OnCorruptionIncrease(float value);
@@ -47,6 +60,10 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = Gameplay)
 		void OnCorruptionUpdate();
 
+	/** called when something enters the sphere component */
+	UFUNCTION(BlueprintImplementableEvent, Category = Gameplay)
+		void ApplyDemux(float Value);
+
 	/** Ends The Game*/
 	UFUNCTION(BlueprintImplementableEvent, Category = Gameplay)
 		void OnGameEnd();
@@ -54,5 +71,7 @@ public:
 protected:
 	/** Checks Level Corruption if it's over a value*/
 	bool IsCorruptionOver(float Value);
+	/** Checks if Level Corruption should cause Demux*/
+	bool ShouldApplyDemux();
 
 };
