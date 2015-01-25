@@ -4,6 +4,7 @@
 
 #include "GameFramework/Actor.h"
 #include "ProjectileType.h"
+#include "EnemyModifiers.h"
 #include "EnemyProjectile.generated.h"
 
 /**
@@ -20,12 +21,18 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "3D Models")
 	TArray<USkeletalMesh*> Monsters;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Properties")
+	FEnemyDescriptor Descriptor;
+
 public:
 	AEnemyProjectile(const FObjectInitializer& ObjectInitializer);
 	
 	void SetProperties(uint32 NewId, EProjectileType NewType);
 
 	uint32 GetId();
+
+	static FEnemyDescriptor GetDefaultDescriptor(EProjectileType Type);
+
 
 private:
 	uint32 Id;
