@@ -18,11 +18,11 @@ UProjectileSpawnerComponent::UProjectileSpawnerComponent(const FObjectInitialize
 	std::srand(std::time(0));
 }
 
-void UProjectileSpawnerComponent::SpawnExactlyAt(uint32 index, EProjectileType Type)
+void UProjectileSpawnerComponent::SpawnExactlyAt(int32 index, EProjectileType Type)
 {
 	AEnemyProjectile* tmp;
 	if (SpawnPoints.Num()) {
-		if ((uint32) SpawnPoints.Num() < index) {
+		if ((int32) SpawnPoints.Num() < index) {
 			DebugUtils::LogString("Spawner:: Error Out of Bound SpawnPoints");
 		}
 		tmp = GetWorld()->SpawnActor<AEnemyProjectile>(EnemyClass, SpawnPoints[index % SpawnPoints.Num()], FRotator(0, 0, 0));

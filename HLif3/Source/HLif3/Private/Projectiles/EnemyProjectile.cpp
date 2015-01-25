@@ -16,17 +16,17 @@
 AEnemyProjectile::AEnemyProjectile(const FObjectInitializer& ObjectInitializer)
 	: Super(ObjectInitializer)
 {
-	Type = EProjectileType::Type1;
-	ActualMesh = ObjectInitializer.CreateAbstractDefaultSubobject<USkeletalMeshComponent>(this, "enemy mesh");
-	RootComponent = ActualMesh;
+	PrType = EProjectileType::Type1;
+	//ActualMesh = ObjectInitializer.CreateAbstractDefaultSubobject<USkeletalMeshComponent>(this, "enemy mesh");
+	//RootComponent = ActualMesh;
 	Monsters = TArray<USkeletalMesh*>();
 }
 
 void AEnemyProjectile::SetProperties(uint32 NewId, EProjectileType NewType)
 {
 	Id = NewId;
-	Type = NewType;
-	UpdateMesh();
+	PrType = NewType;
+	//UpdateMesh();
 	Descriptor = GetDefaultDescriptor(NewType);
 }
 
@@ -38,7 +38,7 @@ uint32 AEnemyProjectile::GetId()
 void AEnemyProjectile::UpdateMesh()
 {
 	USkeletalMesh* m = nullptr;
-	switch (Type)
+	switch (PrType)
 	{
 	case EProjectileType::Type1:
 		if (Monsters.IsValidIndex(_Mesh_Type0)) {
