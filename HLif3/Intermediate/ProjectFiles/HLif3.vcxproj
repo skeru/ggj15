@@ -65,6 +65,7 @@
 		<ClCompile Include="..\..\Source\HLif3\Private\Character\CharacterDemultiplier.cpp" />
 		<ClCompile Include="..\..\Source\HLif3\Private\CustomUtils\TestTimerActor.cpp" />
 		<ClInclude Include="..\..\Source\HLif3\Private\CustomUtils\TestTimerActor.h" />
+		<ClCompile Include="..\..\Source\HLif3\Private\Projectiles\EnemyModifiers.cpp" />
 		<ClCompile Include="..\..\Source\HLif3\Private\Projectiles\EnemyProjectile.cpp" />
 		<ClCompile Include="..\..\Source\HLif3\Private\Projectiles\ProjectileSpawnerComponent.cpp" />
 		<ClInclude Include="..\..\Source\HLif3\Public\CorruptionManager.h" />
@@ -80,6 +81,7 @@
 		<ClInclude Include="..\..\Source\HLif3\Public\Character\CharacterDemultiplier.h" />
 		<ClInclude Include="..\..\Source\HLif3\Public\CustomUtils\DataUtils.h" />
 		<ClInclude Include="..\..\Source\HLif3\Public\CustomUtils\DebugUtils.h" />
+		<ClInclude Include="..\..\Source\HLif3\Public\Projectiles\EnemyModifiers.h" />
 		<ClInclude Include="..\..\Source\HLif3\Public\Projectiles\EnemyProjectile.h" />
 		<ClInclude Include="..\..\Source\HLif3\Public\Projectiles\ProjectileListener.h" />
 		<ClInclude Include="..\..\Source\HLif3\Public\Projectiles\ProjectileSpawnerComponent.h" />
