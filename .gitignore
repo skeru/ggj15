@@ -193,6 +193,7 @@ HLif3/DerivedDataCache
 HLif3/Content/StarterContent/*
 
 HLif3/Content/*
+HLif3/RawData/*
 HLif3/Saved/*
 
 #other shit
@@ -220,3 +221,4 @@ HLif3/Saved/Config/Windows/EditorUserSettings.ini
 HLif3/Saved/Config/Windows/Engine.ini
 HLif3/Saved/Config/Windows/GameUserSettings.ini
 *.dll
+*.png
