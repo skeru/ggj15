@@ -34,9 +34,9 @@ TestResult.xml
 [Rr]eleasePS/
 dlldata.c
 
-*_i.c
-*_p.c
-*_i.h
+#*_i.c
+#*_p.c
+#*_i.h
 *.ilk
 *.meta
 *.obj
@@ -191,6 +191,11 @@ HLif3/DerivedDataCache
 
 #Starter Content
 HLif3/Content/StarterContent/*
+
+HLif3/Content/*
+HLif3/Saved/*
+
+#other shit
 Hlif3/Content/Animations/FPP_*.uasset
 HLif3/Content/Audio/Template1rst_WeaponFire02.uasset
 HLif3/Content/Blueprints/Projectile.uasset
