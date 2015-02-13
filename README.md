@@ -1,11 +1,18 @@
 # ggj15
 
-This repository contains the source code of a project build during the Global Game Jam 2015
+This repository contains the source code of a project build during the Global Game Jam 2015.
+
 This project was developed in less than 48 h by a team of 11 people.
 
-*** *** *** HackLif3 *** *** ***
+23 - 24 - 25 January 2015, Politecnico di Milano
 
-made by EpicGuys team
+<h1>*** *** *** HackLif3 *** *** ***</h1>
+
+**Awards**:
+- best soundtrack (Poli.Radio award)
+- best trash game (staff award)
+
+made by ***EpicGuys*** team
 
 Programmers:
 - Alessandro Osima
@@ -32,4 +39,5 @@ Multimedia artist:
 
 
 If you want to compile this project you need a legal copy of UnrealEngine 4.6.1
+
 If you want to compile this project you have to add to this project our content files. We'll provide them upon request.
